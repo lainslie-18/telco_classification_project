@@ -9,7 +9,7 @@
 
 ### Project Description
 
-why you are tackling this project, why it is important and how it could be of use to someone else beyond just the interest or new knowledge.
+Reducing churn is important to the company because lost customers means lost revenue. The cost of acquiring a new customer is much higher than maintaining a customer so this project will attempt to identify strategies that reduce customer churn. In the process, we are also looking for ways to improve customer satisfaction to increase the company's rate of growth.
 
 ### Initial Hypotheses/Questions
 
@@ -28,10 +28,23 @@ why you are tackling this project, why it is important and how it could be of us
 
 **Planning**
 
+- Define goals
+- Determine audience and delivery format
+- What is my MVP?
+- Ask questions/formulate hypotheses
+
 **Acquisition**
-(steps I took for wrangling)
+- Create function for establishing connection to telco_churn db
+- Create function for SQL query and reading in results
+- Create function caching data
+- Create acquire.py to save these functions for importing
+- Test functions
 
 **Preparation**
+- Create function that cleans data
+- Create function that splits data into train, validate, and test samples
+- Create prepare.py to save these functions for importing
+- Test functions
 
 **Exploration**
 
