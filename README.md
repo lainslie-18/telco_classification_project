@@ -4,8 +4,8 @@
 
 ### Project Goals
 
-- To identify drivers of customer churn and find a solution for increasing customer retention
-- To construct a model that accurately predicts which customers are most likely to churn to focus retention efforts
+* To identify drivers of customer churn and find a solution for increasing customer retention
+* To construct a model that accurately predicts which customers are most likely to churn to focus retention efforts
 
 ### Project Description
 
@@ -13,13 +13,13 @@ Reducing churn is important to the company because lost customers means lost rev
 
 ### Initial Hypotheses/Questions
 
-- Do customers with month-to-month contracts churn at a higher rate? What are the churn rates with other contract types?
+* Do customers with month-to-month contracts churn at a higher rate? What are the churn rates with other contract types?
 
-- Is there a certain tenure length where month-to-month customers are more likely to churn? What about customers with contracts?
+* Is there a certain tenure length where month-to-month customers are more likely to churn? What about customers with contracts?
 
-- Is any specific service associated with higher churn rates?
+* Is any specific service associated with higher churn rates?
 
-- Is it higher monthly charges that are causing churn? If so, what is that threshold where most customers churn for their specific service?
+* Is it higher monthly charges that are causing churn? If so, what is that threshold where most customers churn for their specific service?
 
 ### Data dictionary
 
@@ -28,25 +28,34 @@ Reducing churn is important to the company because lost customers means lost rev
 
 **Planning**
 
-- Define goals
-- Determine audience and delivery format
-- What is my MVP?
-- Ask questions/formulate hypotheses
+* Define goals
+* Determine audience and delivery format
+* What is my MVP?
+* Ask questions/formulate hypotheses
 
 **Acquisition**
-- Create function for establishing connection to telco_churn db
-- Create function for SQL query and reading in results
-- Create function caching data
-- Create acquire.py to save these functions for importing
-- Test functions
+* Create function for establishing connection to telco_churn db
+* Create function for SQL query and reading in results
+* Create function caching data
+* Create acquire.py to save these functions for importing
+* Test functions
 
 **Preparation**
-- Create function that cleans data
-- Create function that splits data into train, validate, and test samples
-- Create prepare.py to save these functions for importing
-- Test functions
+* Create function that cleans data
+  * Change data type for total_charges from object to float
+  * Drop monthly_charges null values where customers have less than a month of tenure therefore no opportunity to churn
+  * Replace all instances of 'No internet service' as that information is in internet_service_type column and doing so simplifies encoding by creating binary values for many of the colums
+  * Create dummy variables for columns with object datatype
+  * Drop columns that contain duplicate information or are unnecessary
+  * Rename columns 
+* Create function that splits data into train, validate, and test samples
+  * Split 20% (test), 24% (validate), and 56% (train)
+* Create prepare.py to save these functions for importing
+* Test functions
 
 **Exploration**
+* 
+* 
 
 **Modeling**
 
