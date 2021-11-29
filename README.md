@@ -109,9 +109,9 @@ Reducing churn is important to the company because lost customers means lost rev
 * You will need an env file with your database credentials (user, password, hostname) saved to your working directory
 * Create a gitignore and add your env file to prevent your credentials from getting pushed to Github
 * Download the aquire.py and prepare.py files to your working directory
-* Download the telco_classification_project notebook to your working directory
+* Download the telco_classification_project_final notebook to your working directory
 * Read this README.md
-* Run the telco_classification_project.ipynb notebook
+* Run the telco_classification_project_final.ipynb notebook
 
 ### Recommendations and Next Steps
 * Reduce monthly price for fiber optic internet service
