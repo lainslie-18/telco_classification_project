@@ -23,8 +23,7 @@ def clean_telco_data(df):
     dummy_df2 = pd.get_dummies(df[['multiple_lines','contract_type', 'internet_service_type', 'payment_type']])
     
     # identify and drop columns that are unnecessary or duplicated
-    cols_to_drop = ['payment_type_id', 'internet_service_type_id', 'contract_type_id',
-                    'customer_id', 'gender','partner', 'dependents', 'phone_service', 'online_security',
+    cols_to_drop = ['payment_type_id', 'internet_service_type_id',         'contract_type_id', 'gender','partner', 'dependents', 'phone_service', 'online_security',
                     'online_backup', 'device_protection', 'tech_support', 'streaming_tv',
                     'streaming_movies', 'paperless_billing', 'churn']
     df = df.drop(columns=cols_to_drop)
